@@ -1,0 +1,13 @@
+<%-include('layouts/header');%>
+  
+<div class="mt-5 pt-5">
+
+  <% articles.forEach(article => { %>
+
+    <ul><a href="/article/<%=article.id%>"><h4><%= article.title %></h4></a></ul>
+
+  <% }) %>
+
+</div>
+
+<%-include('layouts/footer')%>

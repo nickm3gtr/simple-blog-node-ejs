@@ -1,0 +1,16 @@
+<%-include('layouts/header');%>
+  
+<div class="mt-5 pt-5">
+
+  <%if(articles.length >0) {%>
+    <p><%=articles.length%> posts found.</p>
+    <% articles.forEach(article => { %>
+      <ul><a href="/article/<%=article.id%>"><%= article.title %></a></ul>
+    <% }) %>
+  <%} else {%>
+    <p>No result.</p>
+  <%}%>
+
+</div>
+
+<%-include('layouts/footer')%>
