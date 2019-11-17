@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 // DATABASE
-const uri = "mongodb+srv://nick:nick123@cluster0-z3vvh.mongodb.net/articles?retryWrites=true&w=majority";
+const uri = process.env.DATABASE
 
 const db = {
   database: () => {

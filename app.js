@@ -6,6 +6,8 @@ const bodyParser = require('body-parser')
 
 const app = express()
 
+const PORT = process.env.PORT || 5000
+
 // Load View Engine
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
@@ -21,4 +23,4 @@ db.database()
 
 app.use('/', require('./routes/articles'))
 
-app.listen(5000, () => console.log('Server started...'))
+app.listen(PORT, () => console.log('Server started...'))
